@@ -22,9 +22,9 @@ def page_candidate(idx):
 
 
 @app.route("/search/<candidate_name>")
-def page_skills(candidate_name):
+def page_name(candidate_name):
   """Поиск кандидата по имени"""
-  candidates: list[dict] = get_candidate_skill(candidate_name.lower())
+  candidates: list[dict] = get_candidates_by_name(candidate_name)
   return render_template("search.html", candidates=candidates)
 
 
