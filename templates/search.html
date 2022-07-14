@@ -1,0 +1,14 @@
+<!-- представление /search/<candidate_name> для поиска по совпадению -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Найдено кандидатов {{ candidates|length }}</h1>
+{% for candidate i candidates %}
+<p><a href="/candidate/{{ candidate.id }}">{{ candidate.name }}</a></p>
+{% endfor %}
+</body>
+</html>

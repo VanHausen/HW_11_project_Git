@@ -1,0 +1,14 @@
+<!-- представление /skill/<skill_name> для поиска по навыкам -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Найдено со скиллом {{ skill }}: {{ candidates|length }}</h1>
+{% for candidate i candidates %}
+<p><a href="/candidate/{{ candidate.id }}">{{ candidate.name }}</a></p>
+{% endfor %}
+</body>
+</html>
